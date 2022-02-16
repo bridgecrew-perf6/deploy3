@@ -22,7 +22,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 
 ROOT_PATH = os.path.dirname(__file__)
 
-STATIC_ROOT = "/home/kudos02/deploy/static"
+STATIC_ROOT = "/home/kudos02/deploy3/static"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 

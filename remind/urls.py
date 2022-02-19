@@ -18,12 +18,18 @@ from django.urls import path
 from anne import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from anne import views as user_view
+from django.contrib.auth import views as auth
+ 
 urlpatterns = [
     path('',views.searchUser),
-    path('admin/', admin.site.urls),
+    path('search-video', views.searchVideo),    
     path('video-player', views.videoPlayer),
     path('admin/', admin.site.urls),
+    path('login/', user_view.Login, name ='login'),
+    path('logout/', views.userLogout, name = 'logout'),
+    path('register/', user_view.register, name ='register'),
+
 ]
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
